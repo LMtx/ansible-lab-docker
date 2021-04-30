@@ -40,7 +40,7 @@ Build docker images and run containers in the background (details defined in [do
 
 Connect to **master node**:
 
-`docker exec -it master01 bash`
+`docker exec -it master bash`
 
 Verify if network connection is working between master and managed hosts:
 

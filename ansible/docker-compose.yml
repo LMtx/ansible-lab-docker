@@ -8,12 +8,12 @@ services:
       - base
     build: ./master/
     image: ansible_master
-    container_name: master01
-    hostname: master01
+    container_name: master
+    hostname: master
     command: ["/usr/sbin/sshd","-D"]
     volumes:
       - ansible_vol:/var/ans
-  host:
+  host01:
     links:
       - base
       - master
@@ -28,7 +28,7 @@ services:
     links:
       - base
       - master
-      - host
+#      - host
     image: ansible_host
     container_name: host02
     hostname: host02
@@ -39,7 +39,7 @@ services:
     links:
       - base
       - master
-      - host
+#      - host
     image: ansible_host
     container_name: host03
     hostname: host03
